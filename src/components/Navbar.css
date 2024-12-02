@@ -1,0 +1,76 @@
+/* src/components/Navbar.css */
+.navbar {
+  background-color: rgba(117, 115, 115, 0.8); /* Nền navbar đen với độ mờ 80% */
+  padding: 1rem 2rem; /* Padding bên trong navbar */
+  position: sticky; /* Để navbar luôn ở trên cùng khi cuộn trang */
+  top: 0;
+  z-index: 1000; /* Đảm bảo navbar nằm trên các phần tử khác */
+  width: 100%; /* Đảm bảo navbar luôn kéo dài hết chiều rộng */
+  box-sizing: border-box; /* Đảm bảo padding không làm giảm chiều rộng */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Để phần tử bên trái và bên phải phân bố đều */
+  align-items: center;
+  max-width: 1200px; /* Cố định chiều rộng tối đa để không bị quá rộng */
+  margin: 0 auto; /* Căn giữa navbar */
+  width: 100%;
+}
+
+.navbar-logo .logo-text {
+  color: white;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: bold; /* Để logo nổi bật hơn */
+}
+
+.navbar-banner {
+  max-width: 200px; /* Điều chỉnh kích thước banner */
+  height: auto;
+  margin: 0 20px; /* Thêm khoảng cách giữa banner và các phần tử khác */
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Tăng khoảng cách giữa các mục */
+}
+
+.navbar-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px; /* Thay đổi kích thước chữ cho dễ đọc */
+  font-weight: 500; /* Làm chữ ít đậm hơn để dễ nhìn */
+  transition: color 0.3s ease; /* Hiệu ứng chuyển màu */
+}
+
+.navbar-item a:hover {
+  color: #ffcc00; /* Hiệu ứng màu vàng khi hover */
+  text-decoration: underline; /* Thêm gạch dưới khi hover để dễ nhận diện */
+}
+/* src/components/Navbar.css */
+.logout-btn {
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.logout-btn:hover {
+  background-color: #d73a3a;
+}
+/* src/components/Navbar.css */
+.navbar-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}

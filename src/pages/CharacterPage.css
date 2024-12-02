@@ -1,0 +1,234 @@
+/* Kiểu dáng của trang chính */
+.character-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f3e9e9; /* Nền sáng của trang */
+  border-radius: 12px; /* Bo góc trang */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng mờ nhẹ */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Giữ hình nền cố định khi cuộn trang */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  animation: moveBackground 20s linear infinite; /* Thêm hiệu ứng chuyển động nền */
+}
+
+/* Hiệu ứng chuyển động nền */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Header nhân vật */
+.character-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  width: 100%;
+  gap: 25px; /* Khoảng cách giữa ảnh và thông tin */
+}
+
+/* Hình ảnh nhân vật */
+.character-img {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 20px; /* Bo góc hình ảnh */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn cho hình ảnh */
+}
+
+/* Thông tin nhân vật */
+.character-info {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.6;
+  color: #333; /* Màu chữ đen dễ đọc */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.85
+  ); /* Nền trắng đục cho phần thông tin */
+  border-radius: 15px; /* Bo góc cho phần thông tin */
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.character-info h1 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.character-info p {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Thông tin chi tiết */
+.character-details {
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.95); /* Nền sáng và trong suốt */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 850px;
+}
+
+.character-details h2 {
+  margin-bottom: 18px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2980b9;
+}
+
+.character-details p {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #555;
+}
+
+.character-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.character-details li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Tài năng và kỹ năng */
+.character-talents,
+.character-skills {
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.95); /* Nền sáng và trong suốt */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 850px;
+}
+
+.character-talents h2,
+.character-skills h2 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2980b9;
+}
+
+.character-talents p,
+.character-skills p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Video container */
+.video-container {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+/* Thiết kế phản hồi di động */
+@media (max-width: 768px) {
+  .character-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Khoảng cách nhỏ hơn giữa ảnh và thông tin */
+  }
+
+  .character-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .character-info {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .character-details,
+  .character-talents,
+  .character-skills {
+    width: 90%;
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+/* Hiệu ứng nổi động khi hover vào hình ảnh nhân vật */
+.character-img {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 20px; /* Bo góc hình ảnh */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn cho hình ảnh */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+/* Khi hover vào hình ảnh nhân vật */
+.character-img:hover {
+  transform: scale(1.1); /* Phóng to hình ảnh lên 10% */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Tăng độ bóng khi hover */
+}
+
+/* Hiệu ứng nổi động khi hover vào thông tin nhân vật */
+.character-info {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.6;
+  color: #333; /* Màu chữ đen dễ đọc */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.85
+  ); /* Nền trắng đục cho phần thông tin */
+  border-radius: 15px; /* Bo góc cho phần thông tin */
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+/* Khi hover vào thông tin nhân vật */
+.character-info:hover {
+  transform: scale(1.05); /* Phóng to thông tin nhân vật lên 5% */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Tăng độ bóng khi hover */
+}
+
+/* Hiệu ứng nổi động khi bấm vào (click) thông tin nhân vật */
+.character-info:active {
+  transform: scale(0.98); /* Thu nhỏ thông tin một chút khi click */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Giảm độ bóng khi click */
+}
+
+/* Hiệu ứng nổi động khi bấm vào (click) hình ảnh nhân vật */
+.character-img:active {
+  transform: scale(0.98); /* Thu nhỏ hình ảnh một chút khi click */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Giảm độ bóng khi click */
+}

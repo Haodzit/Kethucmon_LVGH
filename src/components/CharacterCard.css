@@ -1,0 +1,120 @@
+/* src/components/CharacterCard.css */
+.character-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+  margin: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; /* Thêm con trỏ hover */
+}
+
+.character-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  background-color: #f4f4f4; /* Đổi màu nền khi hover */
+}
+
+.character-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.character-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.character-card p {
+  color: #888;
+  font-size: 14px;
+  margin: 5px 0;
+}
+/* CharacterCard.css */
+
+.character-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  max-width: 200px;
+  width: 100%;
+}
+
+.character-card:hover {
+  transform: translateY(-10px);
+}
+
+.character-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.character-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.character-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.character-element {
+  font-size: 1em;
+  color: #777;
+}
+
+.character-info {
+  margin-top: 10px;
+}
+
+.character-info p {
+  margin: 5px 0;
+}
+
+/* Style for specific character themes (e.g., Lyney, Lynette, etc.) */
+.character-lyney {
+  background-color: #f8e0d9; /* Light pink for Lyney */
+}
+
+.character-lyney .character-title {
+  color: #ff6f61; /* Red for Hỏa element */
+}
+
+.character-lynette {
+  background-color: #cce5ff; /* Light blue for Lynette */
+}
+
+.character-lynette .character-title {
+  color: #8d9eff; /* Blue for Phong element */
+}
+
+.character-freminet {
+  background-color: #e0f7fa; /* Light cyan for Freminet */
+}
+
+.character-freminet .character-title {
+  color: #00acc1; /* Cyan for Băng element */
+}
+
+/* Add similar styles for other characters... */

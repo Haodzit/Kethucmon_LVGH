@@ -1,0 +1,62 @@
+/* src/App.css */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  color: #777;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home,
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home h1 {
+  margin-top: 50px;
+  font-size: 36px;
+}
+
+.home p,
+.about p {
+  font-size: 18px;
+  color: #555;
+  max-width: 800px;
+}
+/* Thêm ảnh nền cho toàn bộ ứng dụng */
+body {
+  background-image: url("https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24922324/GenshinImpact_hc_c__1_.JPG?quality=90&strip=all&crop=0%2C27.418841502228%2C100%2C55.887969446213&w=2400"); /* URL ảnh nền */
+  background-size: cover; /* Đảm bảo ảnh nền phủ đầy màn hình */
+  background-position: center; /* Căn giữa ảnh nền */
+  background-attachment: fixed; /* Giữ ảnh nền cố định khi cuộn trang */
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  min-height: 50vh; /* Đảm bảo ứng dụng luôn chiếm hết chiều cao của trình duyệt */
+  display: flex;
+  flex-direction: column;
+}

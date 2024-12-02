@@ -1,0 +1,87 @@
+/* Thiết lập cho container chính */
+.home-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+  overflow: hidden; /* Đảm bảo không có thanh cuộn xuất hiện ngoài container */
+}
+
+/* Thiết lập cho phần chứa slider ảnh */
+.image-slider {
+  display: flex;
+  gap: 15px; /* Khoảng cách giữa các ảnh */
+  width: 100%;
+  overflow: hidden;
+  margin: 50px auto;
+  position: relative;
+  animation: slideAnimation 60s linear infinite; /* Thời gian dài để hiệu ứng chuyển động mượt mà */
+}
+
+/* Hiệu ứng chuyển động của ảnh */
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0); /* Vị trí ban đầu */
+  }
+  100% {
+    transform: translateX(-100%); /* Di chuyển hết tất cả ảnh và quay lại đầu */
+  }
+}
+
+/* Đảm bảo tất cả ảnh có kích thước đồng đều */
+.image-slider .image-slide {
+  flex-shrink: 0; /* Ngăn không cho ảnh bị thu nhỏ khi quá nhiều */
+  min-width: 250px; /* Chiều rộng tối thiểu cho mỗi ảnh */
+  max-width: 300px; /* Chiều rộng tối đa cho mỗi ảnh */
+  height: 200px; /* Chiều cao cố định cho các ảnh */
+  overflow: hidden;
+}
+
+/* Căn chỉnh ảnh cho đẹp */
+.image-slider .image-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh tràn đầy container mà không bị méo */
+  border-radius: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hiệu ứng hover khi di chuột lên ảnh */
+.image-slider .image-slide img:hover {
+  transform: scale(1.1); /* Phóng to ảnh khi hover */
+  opacity: 0.8; /* Giảm độ trong suốt khi hover */
+}
+
+/* Responsive: Điều chỉnh kích thước ảnh khi màn hình nhỏ hơn */
+@media (max-width: 768px) {
+  .image-slider .image-slide {
+    min-width: 200px; /* Giảm kích thước ảnh trên màn hình nhỏ */
+    max-width: 250px; /* Giảm kích thước ảnh trên màn hình nhỏ */
+    height: 150px; /* Giảm chiều cao ảnh trên màn hình nhỏ */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-slider .image-slide {
+    min-width: 150px; /* Giảm thêm kích thước ảnh trên màn hình cực nhỏ */
+    max-width: 200px;
+    height: 120px; /* Giảm chiều cao ảnh trên màn hình cực nhỏ */
+  }
+}
+/* Kiểu dáng cho nút nhấn */
+.next-page-btn {
+  background-color: #4caf50; /* Màu nền xanh lá */
+  color: white; /* Màu chữ trắng */
+  border: none;
+  padding: 10px 20px; /* Khoảng cách xung quanh chữ */
+  font-size: 16px;
+  cursor: pointer; /* Con trỏ chuột khi hover */
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền khi hover */
+}
+
+/* Hiệu ứng hover cho nút */
+.next-page-btn:hover {
+  background-color: #45a049; /* Màu nền khi hover */
+}
